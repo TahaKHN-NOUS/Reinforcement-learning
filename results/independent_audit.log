@@ -1,0 +1,2 @@
+PASS: results/real: training-only bins, validation selection, saved policies, six ledgers, fees and wealth reconciled.
+PASS: results/synthetic: training-only bins, validation selection, saved policies, six ledgers, fees and wealth reconciled.

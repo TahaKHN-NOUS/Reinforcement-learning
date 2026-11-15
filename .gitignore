@@ -1,0 +1,10 @@
+/rl
+/tests/test_rl
+/tests/test_sanitize
+/tests/rl_sanitize
+/tests/*.tmp
+/results/smoke/
+/results/sanitize/
+__pycache__/
+*.o
+.DS_Store

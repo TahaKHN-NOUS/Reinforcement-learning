@@ -1,0 +1,21 @@
+name: C checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - name: Build and unit tests
+        run: make all test
+      - name: Address, undefined-behavior, and leak checks
+        if: runner.os == 'Linux'
+        run: make sanitize
+      - name: Run maze, trading, and independent audit
+        run: |
+          make smoke
+          python3 tools/report.py --check-only

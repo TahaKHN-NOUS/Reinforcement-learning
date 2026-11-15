@@ -1,0 +1,52 @@
+gcc -Iinclude -std=c11 -O2 -Wall -Wextra -Wpedantic -Werror src/main.c src/agent.c src/maze.c src/data.c src/trading.c -lm -o rl
+./tests/test_rl
+PASS: terminal Q target excludes future values
+PASS: nonterminal Q update
+PASS: Double Q selects with one table and evaluates with the other
+PASS: terminal Double Q target
+PASS: saved Q tables reload exactly
+PASS: training breaks zero-table ties across actions
+PASS: original maze BFS shortest path
+PASS: outer-border moves cannot read outside the grid
+PASS: goal is absorbing
+PASS: second maze shortest path
+PASS: trained frozen maze policy reaches shortest route
+PASS: training and rendering do not mutate the maze
+PASS: test data allocation
+PASS: synthetic dataset is generated and validated
+PASS: deterministic dated synthetic input
+PASS: future prices cannot change training thresholds
+PASS: current and future bars cannot change the pre-open state
+PASS: feature bins stay inside the 36-state table
+PASS: state explicitly includes exposure
+PASS: buy, open-to-open return, and terminal liquidation compound correctly
+PASS: holding exposure does not pay a new entry fee
+PASS: sale costs one-way fee and removes market exposure
+PASS: flat hold earns zero and pays no fees
+PASS: cash is a genuine zero-return baseline
+PASS: buy-and-hold matches direct price ratio
+PASS: buy-and-hold pays only entry and exit costs
+PASS: held-out evaluation cannot update Q tables
+PASS: unseen trading states fall back to flat, not arbitrary buy
+PASS: training traverses the full history and records coverage
+PASS: invalid market prices are rejected
+PASS: duplicate market dates are rejected
+PASS: invalid calendar dates are rejected
+Prepared 120 completed source-clock dates; retained 120 dates with missing intraday bars.
+Excluded final observed date 2000.06.19 because completion is not established.
+PASS: preparation retains sparse observed days without filling missing bars
+PASS: preparation excludes only the unfinished final date
+PASS: preparation cannot overwrite its source file
+35 checks passed.
+mkdir -p results/maze results/maze_small results/real results/synthetic
+./rl maze data/maze.txt results/maze 10
+Maze q_learning: 10/10 successful frozen policies; BFS optimum 45
+Maze double_q: 10/10 successful frozen policies; BFS optimum 45
+./rl maze data/maze_small.txt results/maze_small 10
+Maze q_learning: 10/10 successful frozen policies; BFS optimum 10
+Maze double_q: 10/10 successful frozen policies; BFS optimum 10
+./rl demo data/synthetic_prices.csv
+./rl trade data/synthetic_prices.csv results/synthetic 10
+Validation-selected policy: q_learning (cash is an eligible fallback).
+./rl trade data/eurusd_daily.csv results/real 10
+Validation-selected policy: cash (cash is an eligible fallback).

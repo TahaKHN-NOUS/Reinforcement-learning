@@ -1,0 +1,3 @@
+Maze q_learning: 1/1 successful frozen policies; BFS optimum 45
+Maze double_q: 1/1 successful frozen policies; BFS optimum 45
+Validation-selected policy: cash (cash is an eligible fallback).

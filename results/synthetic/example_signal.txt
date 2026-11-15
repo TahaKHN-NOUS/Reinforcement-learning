@@ -1,0 +1,3 @@
+After close 2011-07-01: selected=q_learning state=14 position=0
+Next available open: HOLD current exposure
+This is a policy action, not a price forecast or a calibrated probability.

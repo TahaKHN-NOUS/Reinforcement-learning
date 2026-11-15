@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="400" viewBox="0 0 1000 400">
+<rect width="1000" height="400" fill="white"/>
+<text x="30" y="35" font-family="sans-serif" font-size="22">Real example: held-out net return</text>
+<line x1="642.9865220962902" y1="60" x2="642.9865220962902" y2="325" stroke="#aaa"/>
+<text x="175" y="90" text-anchor="end" font-family="sans-serif" font-size="16">cash</text>
+<line x1="642.9865220962902" y1="85" x2="642.9865220962902" y2="85" stroke="#35748a" stroke-width="3"/>
+<circle cx="642.9865220962902" cy="85" r="6" fill="#ab542f"/>
+<text x="830" y="90" font-family="sans-serif" font-size="15">+0.00%</text>
+<text x="175" y="140" text-anchor="end" font-family="sans-serif" font-size="16">buy_hold</text>
+<line x1="687.1834704059697" y1="135" x2="687.1834704059697" y2="135" stroke="#35748a" stroke-width="3"/>
+<circle cx="687.1834704059697" cy="135" r="6" fill="#ab542f"/>
+<text x="830" y="140" font-family="sans-serif" font-size="15">+1.21%</text>
+<text x="175" y="190" text-anchor="end" font-family="sans-serif" font-size="16">momentum</text>
+<line x1="262.91482595710295" y1="185" x2="262.91482595710295" y2="185" stroke="#35748a" stroke-width="3"/>
+<circle cx="262.91482595710295" cy="185" r="6" fill="#ab542f"/>
+<text x="830" y="190" font-family="sans-serif" font-size="15">-10.43%</text>
+<text x="175" y="240" text-anchor="end" font-family="sans-serif" font-size="16">q_learning</text>
+<line x1="383.1440486048231" y1="235" x2="737.0851740428969" y2="235" stroke="#35748a" stroke-width="3"/>
+<circle cx="644.6328381026401" cy="235" r="6" fill="#ab542f"/>
+<text x="830" y="240" font-family="sans-serif" font-size="15">+0.05%</text>
+<text x="175" y="290" text-anchor="end" font-family="sans-serif" font-size="16">double_q</text>
+<line x1="364.8497815915897" y1="285" x2="737.0771305306401" y2="285" stroke="#35748a" stroke-width="3"/>
+<circle cx="613.493827019095" cy="285" r="6" fill="#ab542f"/>
+<text x="830" y="290" font-family="sans-serif" font-size="15">-0.81%</text>
+<text x="190.0" y="345" font-family="sans-serif" font-size="13">-12.4%</text>
+<text x="810.0" y="345" text-anchor="end" font-family="sans-serif" font-size="13">4.6%</text>
+<text x="30" y="380" font-family="sans-serif" font-size="14">Dot = mean; line = min/max across ten seeds. Baselines have one run. Cost = 1 bp per side.</text>
+</svg>

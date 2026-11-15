@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this project when using the rebuilt implementation or protocol."
+title: "Tabular Reinforcement Learning in C: Maze Benchmarks and Trading"
+type: software
+version: 1.0.0
+date-released: 2026-11-15
+authors:
+  - family-names: "Khn-nous"
+    given-names: "Taha"
+license: MIT
